@@ -101,7 +101,7 @@ public class calculator implements ActionListener {
 
     public static void main(String[] args) {
 
-        // calculator calc = new calculator();
+        calculator calc = new calculator();
 
     }
 
@@ -112,25 +112,25 @@ public class calculator implements ActionListener {
                 textfield.setText(textfield.getText().concat(String.valueOf(i)));
             }
         }
-        if (e.getSource() == decButton()) {
+        if (e.getSource() == decButton) {
             textfield.setText(textfield.getText().concat("."));
         }
-        if (e.getSource() == addButton()) {
+        if (e.getSource() == addButton) {
             num1 = Double.parseDouble(textfield.getText());
             operator = "+";
             textfield.setText("");
         }
-        if (e.getSource() == subButton()) {
+        if (e.getSource() == subButton) {
             num1 = Double.parseDouble(textfield.getText());
             operator = "-";
             textfield.setText("");
         }
-        if (e.getSource() == mulButton()) {
+        if (e.getSource() == mulButton) {
             num1 = Double.parseDouble(textfield.getText());
             operator = "*";
             textfield.setText("");
         }
-        if (e.getSource() == divButton()) {
+        if (e.getSource() == divButton) {
             num1 = Double.parseDouble(textfield.getText());
             operator = "/";
             textfield.setText("");
@@ -179,29 +179,6 @@ public class calculator implements ActionListener {
             textfield.setText(String.valueOf(temp));
         }
 
-    }
-
-    private Object divButton() {
-        return null;
-    }
-
-    private Object mulButton() {
-        return null;
-    }
-
-    private Object subButton() {
-        return null;
-    }
-
-    private Object addButton() {
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    private Object decButton() {
-        return null;
     }
 
 }
