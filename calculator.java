@@ -101,7 +101,7 @@ public class calculator implements ActionListener {
 
     public static void main(String[] args) {
 
-        calculator calc = new calculator();
+        // calculator calc = new calculator();
 
     }
 
@@ -139,20 +139,20 @@ public class calculator implements ActionListener {
             num2 = Double.parseDouble(textfield.getText());
 
             switch (operator) {
-                case '+':
+                case "+":
                     result = num1 + num2;
                     break;
-                case '-':
+                case "-":
                     result = num1 - num2;
                     break;
-                case '*':
+                case "*":
                     result = num1 * num2;
                     break;
-                case '/':
+                case "/":
                     result = num1 / num2;
                     break;
             }
-            textfield.setText((String.valueof(result)));
+            textfield.setText((String.valueOf(result)));
             num1 = result;
         }
         if (e.getSource() == clrButton) {
@@ -164,18 +164,18 @@ public class calculator implements ActionListener {
             for (int i = 0; i < string.length() - 1; i++) {
                 textfield.setText(textfield.getText() + string.charAt(i));
             }
+        }
 
         if (e.getSource() == negButton) {
-            String string = textfield.getText();
+            String String = textfield.getText();
             textfield.setText("");
-            for (int i = 0; i < string.length() - 1; i++) {
-                textfield.setText(textfield.getText() + string.charAt(i));
+            for (int i = 0; i < String.length() - 1; i++) {
+                textfield.setText(textfield.getText() + String.charAt(i));
             }
         }
-        if (e.getSource() == negButton)
-        {
+        if (e.getSource() == negButton) {
             double temp = Double.parseDouble(textfield.getText());
-            temp*=-1;
+            temp *= -1;
             textfield.setText(String.valueOf(temp));
         }
 
@@ -197,10 +197,9 @@ public class calculator implements ActionListener {
         return null;
     }
 
-    private Object decButton() {
-        return null;
-    }
-
+    /**
+     * @return
+     */
     private Object decButton() {
         return null;
     }
